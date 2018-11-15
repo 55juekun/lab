@@ -1,0 +1,2 @@
+一个关于远程控制的方法，服务器端主要用springboot实现。这一块比较多所以只贴上一个controller和主体的socket服务器代码。springboot启动时让mysocket的begin()方法也启动即可。客户端可以使用python也可以用其他的代码实现。
+主要思想是socket记录下每个客户端的id值与对应socket至hashtable中，并保持长连接。之后只需要用户远程访问controller并发送相关的指令，即可控制对应的客户端了。当然客户端的方法需要自己写，也可以将文字解析成代码并执行。我这儿只是简单写了两个方法。
